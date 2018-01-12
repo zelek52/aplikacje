@@ -1,0 +1,16 @@
+current directory: d:/apk/portal/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+C:/RailsInstaller/Ruby2.3.3/bin/ruby.exe -r ./siteconf20180102-11616-13tqe6f.rb extconf.rb
+creating Makefile
+
+current directory: d:/apk/portal/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: d:/apk/portal/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+generating cruby-i386-mingw32.def
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: d:/apk/portal/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20180102-11616-1id7zly/bindex

@@ -1,0 +1,20 @@
+current directory: D:/apk/portal/vendor/bundle/ruby/2.3.0/bundler/gems/bcrypt-ruby-f2db689ba567/ext/mri
+C:/RailsInstaller/Ruby2.3.3/bin/ruby.exe -r ./siteconf20180122-11352-1fx715c.rb extconf.rb
+creating Makefile
+
+current directory: D:/apk/portal/vendor/bundle/ruby/2.3.0/bundler/gems/bcrypt-ruby-f2db689ba567/ext/mri
+make "DESTDIR=" clean
+
+current directory: D:/apk/portal/vendor/bundle/ruby/2.3.0/bundler/gems/bcrypt-ruby-f2db689ba567/ext/mri
+make "DESTDIR="
+generating bcrypt_ext-i386-mingw32.def
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: D:/apk/portal/vendor/bundle/ruby/2.3.0/bundler/gems/bcrypt-ruby-f2db689ba567/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20180122-11352-1pwah99

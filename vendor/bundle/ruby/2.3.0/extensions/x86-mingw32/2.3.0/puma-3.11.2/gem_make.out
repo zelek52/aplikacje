@@ -1,0 +1,23 @@
+current directory: D:/apk/portal/vendor/bundle/ruby/2.3.0/gems/puma-3.11.2/ext/puma_http11
+C:/RailsInstaller/Ruby2.3.3/bin/ruby.exe -r ./siteconf20180122-12072-12lonrp.rb extconf.rb
+checking for BIO_read() in -lcrypto... no
+checking for BIO_read() in -llibeay32... no
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  D:/apk/portal/vendor/bundle/ruby/2.3.0/extensions/x86-mingw32/2.3.0/puma-3.11.2/mkmf.log
+
+current directory: D:/apk/portal/vendor/bundle/ruby/2.3.0/gems/puma-3.11.2/ext/puma_http11
+make "DESTDIR=" clean
+      0 [main] us 0 init_cheap: VirtualAlloc pointer is null, Win32 error 487
+AllocationBase 0x60E90000, BaseAddress 0x60E90000, RegionSize 0x1000, State 0x1000
+C:\RailsInstaller\DevKit\bin\make.exe: *** Couldn't reserve space for cygwin's heap, Win32 error 0
+
+current directory: D:/apk/portal/vendor/bundle/ruby/2.3.0/gems/puma-3.11.2/ext/puma_http11
+make "DESTDIR="
+      0 [main] us 0 init_cheap: VirtualAlloc pointer is null, Win32 error 487
+AllocationBase 0x60E90000, BaseAddress 0x60E90000, RegionSize 0x1000, State 0x1000
+C:\RailsInstaller\DevKit\bin\make.exe: *** Couldn't reserve space for cygwin's heap, Win32 error 0
+
+make failed, exit code 1

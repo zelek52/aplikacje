@@ -1,0 +1,59 @@
+<h1>Strona główna</h1>
+<p>
+Witamy na portalu studenckim stworzonym na potrzeby projektu.
+</p>
+<p>
+Lista grup:
+</p>
+
+<ul>
+<% @groups.each do |group| %>
+<%= link_to group do %>
+<li><%= group.name %></li>
+<% end %>
+<% end %>
+</ul>
+
+
+<p>
+Lista użytkowników:
+</p>
+
+    <ul>
+    <% @users.each do |user| %>
+    <li><%= user.name_public %> <%= user.first_name %></li>
+    <% end %>
+   </ul>
+
+<p>
+</p>
+
+
+
+<p>
+Aktualny czas:
+</p>
+
+<%= Time.now %>
+
+<p>
+</p>
+
+
+<% if logged_in? %>
+<h2>Moje grupy</h2>
+<% current_user.Groups.each do |group| %>
+<h3><%= group.name %></h3>
+<% group.Posts.each do |post| %>
+<h4><%= post.body %> by <%= post.user.login %></h4>
+<% post.Comments.each do |comment| %>
+<p>
+<%= comment.body %>
+</p>
+<h6>by <%= comment.user.login %></h6>
+<% end %>
+<% end %>
+<% end %>
+<% else %>
+Nie jesteś zalogowany.
+<% end %>

@@ -28,7 +28,14 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+#gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+#gem 'bcrypt', '~> 3.1', '>= 3.1.9'
+#gem 'bcrypt-ruby', github: 'codahale/bcrypt-ruby'
+#gem 'bcrypt-ruby', '3.1.9', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+#platforms: [:ruby,:mingw, :x64_mingw]
+#gem 'bcrypt', '~> 3.1.7'#, platforms: :ruby
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -44,6 +51,9 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  #narzedzie do tworzenia wykresow
+  # z projektu apk mobilne
+  gem 'rails-erd'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -12,28 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :group_id %>
-    <%= form.number_field :group_id, id: :group_group_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name, id: :group_name %>
   </div>
 
   <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :group_description %>
+  </div>
+
+  <div class="field">
     <%= form.label :private %>
     <%= form.text_field :private, id: :group_private %>
-  </div>
-
-  <div class="field">
-    <%= form.label :created_date %>
-    <%= form.date_select :created_date, id: :group_created_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :User_id %>
-    <%= form.text_field :User_id, id: :group_User_id %>
   </div>
 
   <div class="actions">

@@ -1,58 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @user.user_id %>
-</p>
-
-<p>
-  <strong>Name public:</strong>
-  <%= @user.name_public %>
-</p>
-
-<p>
   <strong>Login:</strong>
   <%= @user.login %>
 </p>
 
 <p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
+  <strong>Name:</strong>
+  <%= @user.name %>
 </p>
 
 <p>
   <strong>Email:</strong>
   <%= @user.email %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @user.address %>
-</p>
-
-<p>
-  <strong>Phone nr:</strong>
-  <%= @user.phone_nr %>
-</p>
-
-<p>
-  <strong>Joined date:</strong>
-  <%= @user.joined_date %>
-</p>
-
-<p>
-  <strong>Last visit:</strong>
-  <%= @user.last_visit %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

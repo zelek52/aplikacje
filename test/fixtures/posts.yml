@@ -1,17 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  post_id: 1
   body: MyString
-  date_post: 2018-01-13
-  image: MyString
-  User: one
-  Group: one
+  date_post: 2018-02-08
+  user: one
+  group: one
 
 two:
-  post_id: 1
   body: MyString
-  date_post: 2018-01-13
-  image: MyString
-  User: two
-  Group: two
+  date_post: 2018-02-08
+  user: two
+  group: two

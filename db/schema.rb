@@ -10,42 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180122030354) do
+ActiveRecord::Schema.define(version: 20180208231132) do
 
   create_table "comments", force: :cascade do |t|
-    t.integer "comment_id"
     t.string "body"
     t.date "date_comment"
-    t.integer "Post_id"
-    t.integer "User_id"
+    t.integer "user_id"
+    t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Post_id"], name: "index_comments_on_Post_id"
-    t.index ["User_id"], name: "index_comments_on_User_id"
+    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "groups", force: :cascade do |t|
-    t.integer "group_id"
     t.string "name"
+    t.string "description"
     t.string "private"
-    t.date "created_date"
-    t.integer "User_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["User_id"], name: "index_groups_on_User_id"
   end
 
   create_table "posts", force: :cascade do |t|
-    t.integer "post_id"
     t.string "body"
     t.date "date_post"
-    t.string "image"
-    t.integer "User_id"
-    t.integer "Group_id"
+    t.integer "user_id"
+    t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Group_id"], name: "index_posts_on_Group_id"
-    t.index ["User_id"], name: "index_posts_on_User_id"
+    t.index ["group_id"], name: "index_posts_on_group_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "students_courses", id: false, force: :cascade do |t|
@@ -56,25 +50,29 @@ ActiveRecord::Schema.define(version: 20180122030354) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "name_public"
     t.string "login"
-    t.string "password"
-    t.string "last_name"
-    t.string "first_name"
+    t.string "name"
     t.string "email"
-    t.string "address"
-    t.integer "phone_nr"
-    t.date "joined_date"
-    t.date "last_visit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
+    t.string "token"
     t.index ["login"], name: "index_users_on_login", unique: true
-    t.index ["user_id"], name: "index_users_on_user_id", unique: true
+    t.index ["token"], name: "index_users_on_token"
   end
 
   create_table "users_groups", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "group_id"
+    t.index ["group_id"], name: "index_users_groups_on_group_id"
+    t.index ["user_id"], name: "index_users_groups_on_user_id"
+  end
+
+  create_table "usersgroups", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "group_id"
+    t.index ["group_id"], name: "index_usersgroups_on_group_id"
+    t.index ["user_id"], name: "index_usersgroups_on_user_id"
   end
 
 end

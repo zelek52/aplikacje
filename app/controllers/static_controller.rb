@@ -1,4 +1,5 @@
 class StaticController < ApplicationController
+  before_action :require_token, only: [:feed]
   def index
 
     @users = User.all
@@ -6,4 +7,8 @@ class StaticController < ApplicationController
     #@groups = Group.connection(@user)
 
   end
+
+  def feed
+    end
+
 end

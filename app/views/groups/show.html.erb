@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Group:</strong>
-  <%= @group.group_id %>
+  <strong>Name:</strong>
+  <%= @group.name %>
 </p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @group.name %>
+  <strong>Description:</strong>
+  <%= @group.description %>
 </p>
 
 <p>
@@ -15,23 +15,5 @@
   <%= @group.private %>
 </p>
 
-<p>
-  <strong>Created date:</strong>
-  <%= @group.created_date %>
-</p>
-
-
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>
-
-<p>
-</p>
-
-
-<% if logged_in? %>
-<% unless current_user.follows?(@group) %>
-<%= link_to( "Zapisz się do grupy", action: :follow) %>
-<% else %>
-Wypisz się z grupy.
-<% end %>
-<% end %>

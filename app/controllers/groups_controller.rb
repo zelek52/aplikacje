@@ -1,21 +1,11 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: [:show, :edit, :update, :destroy, :follow]
+  before_action :set_group, only: [:show, :edit, :update, :destroy]
 
   # GET /groups
   # GET /groups.json
   def index
     @groups = Group.all
   end
-
-  #zapisanie się do grupy
-  def follow
-    unless current_user.follows?(@group)
-    current_user.groups.append(@group)
-    end
-  redirect_to @group
-  end
-
-
 
   # GET /groups/1
   # GET /groups/1.json
@@ -29,10 +19,6 @@ class GroupsController < ApplicationController
 
   # GET /groups/1/edit
   def edit
-  end
-
-  def follow
-  redirect_to @group
   end
 
   # POST /groups
@@ -83,6 +69,6 @@ class GroupsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def group_params
-      params.require(:group).permit(:group_id, :name, :private, :created_date)
+      params.require(:group).permit(:name, :description, :private)
     end
 end

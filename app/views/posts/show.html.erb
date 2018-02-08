@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Post:</strong>
-  <%= @post.post_id %>
-</p>
-
-<p>
   <strong>Body:</strong>
   <%= @post.body %>
 </p>
@@ -16,18 +11,13 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @post.image %>
-</p>
-
-<p>
   <strong>User:</strong>
-  <%= @post.User %>
+  <%= @post.user %>
 </p>
 
 <p>
   <strong>Group:</strong>
-  <%= @post.Group %>
+  <%= @post.group %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

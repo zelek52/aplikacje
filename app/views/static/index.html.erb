@@ -21,7 +21,7 @@ Lista użytkowników:
 
     <ul>
     <% @users.each do |user| %>
-    <li><%= user.name_public %> <%= user.first_name %></li>
+    <li><%= user.login %></li>
     <% end %>
    </ul>
 
@@ -42,11 +42,11 @@ Aktualny czas:
 
 <% if logged_in? %>
 <h2>Moje grupy</h2>
-<% current_user.Groups.each do |group| %>
+<% current_user.groups.each do |group| %>
 <h3><%= group.name %></h3>
-<% group.Posts.each do |post| %>
+<% group.posts.each do |post| %>
 <h4><%= post.body %> by <%= post.user.login %></h4>
-<% post.Comments.each do |comment| %>
+<% post.comments.each do |comment| %>
 <p>
 <%= comment.body %>
 </p>

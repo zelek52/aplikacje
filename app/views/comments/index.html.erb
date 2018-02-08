@@ -5,11 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>Comment</th>
       <th>Body</th>
       <th>Date comment</th>
-      <th>Post</th>
       <th>User</th>
+      <th>Post</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,11 +16,10 @@
   <tbody>
     <% @comments.each do |comment| %>
       <tr>
-        <td><%= comment.comment_id %></td>
         <td><%= comment.body %></td>
         <td><%= comment.date_comment %></td>
-        <td><%= comment.Post %></td>
-        <td><%= comment.User %></td>
+        <td><%= comment.user %></td>
+        <td><%= comment.post %></td>
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  belongs_to :User
-  belongs_to :Group
-  has_many :Comments
+  belongs_to :user
+  belongs_to :group
+  has_many :comments
 end

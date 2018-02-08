@@ -12,39 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, id: :user_user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :name_public %>
-    <%= form.text_field :name_public, id: :user_name_public %>
-  </div>
-
-  <div class="field">
     <%= form.label :login %>
     <%= form.text_field :login, id: :user_login %>
   </div>
 
   <div class="field">
-    <%= form.label :password %>
-    <%= form.text_field :password, id: :user_password %>
-  </div>
-
-
-<div class="field">
-<%= form.label :password_confirmation %>
-<%= form.password_field :password_confirmation, id: :user_password_confirmation %>
-</div>
-
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, id: :user_last_name %>
+  <%= form.label :password %>
+  <%= form.password_field :password, id: :student_password %>
   </div>
 
   <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, id: :user_first_name %>
+  <%= form.label :password_confirmation %>
+  <%= form.password_field :password_confirmation, id: :student_password_confirmation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :user_name %>
   </div>
 
   <div class="field">
@@ -52,25 +36,6 @@
     <%= form.text_field :email, id: :user_email %>
   </div>
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :user_address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phone_nr %>
-    <%= form.number_field :phone_nr, id: :user_phone_nr %>
-  </div>
-
-  <div class="field">
-    <%= form.label :joined_date %>
-    <%= form.date_select :joined_date, id: :user_joined_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :last_visit %>
-    <%= form.date_select :last_visit, id: :user_last_visit %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>

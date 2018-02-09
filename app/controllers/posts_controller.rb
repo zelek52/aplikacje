@@ -14,21 +14,26 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @group = Group.find(params[:group_id])
+    @post = @group.posts.new
   end
 
   # GET /posts/1/edit
   def edit
   end
 
+
+
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    @group = Group.find(params[:group_id])
+    @post = @group.posts.new(post_params)
+    @post.user = current_user
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html { redirect_to [@group,@post], notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -37,12 +42,15 @@ class PostsController < ApplicationController
     end
   end
 
+
+
+
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.html { redirect_to [@group,@post], notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
@@ -50,6 +58,8 @@ class PostsController < ApplicationController
       end
     end
   end
+
+
 
   # DELETE /posts/1
   # DELETE /posts/1.json
@@ -64,6 +74,7 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
+      @group = Group.find(params[:group_id])
       @post = Post.find(params[:id])
     end
 

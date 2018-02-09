@@ -18,7 +18,7 @@ validates :email, presence: true, uniqueness: true, length: { in: 3..50 }
 
 
  def follows?(group)
-     self.Groups.include?(group)
+     self.groups.include?(group)
  end
 
   def invalidate_token
